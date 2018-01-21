@@ -1,0 +1,230 @@
+@font-face {
+	font-family: Myriad;
+	src: url('../fonts/MyriadPro-Regular.otf');
+}
+
+@font-face {
+	font-family: MyriadSem;
+	src: url('../fonts/MyriadPro-Semibold.otf');
+}
+
+@font-face {
+	font-family: MyriadBold;
+	src: url('../fonts/MyriadPro-Bold.otf');
+}
+
+@font-face {
+	font-family: Pattaya;
+	src: url('../fonts/Pattaya-Regular.ttf');
+}
+
+body {
+	font-family: Myriad, sans-serif;
+}
+
+#content-wrap {
+	position: relative;
+	overflow: hidden;
+}
+
+div.row {
+	margin: 0 !important;
+}
+
+
+/* МЕНЮ */
+
+.menu {
+	padding: 10px 0;
+}
+
+.desktop > div {
+	text-align: center;
+	padding: 0;
+}
+
+.menu-item {
+	display: inline-block;
+	color: #006b3b;
+	font-family: Myriad, 'Arial Narrow', sans-serif;
+	font-size: 15px;
+	padding: 0 15px;
+	margin-top: 25px;
+	position: relative;
+}
+
+.menu-item:hover {
+	font-weight: bold;
+}
+
+.menu-item:before {
+	content: '';
+	display: block;
+	position: absolute;
+	top: -2px;
+	left: 47%;
+	width: 0;
+	height: 0;
+	background: url('../img/list.png') no-repeat;
+	background-size: 100%;
+	-webkit-transition: .4s;
+	transition: .4s;
+}
+
+.menu-item:hover:before {
+	left: 38%;
+	top: -20px;
+	width: 26px;
+	height: 21px;
+}
+
+.sub-menu {
+	position: absolute;
+	width: 200px;
+	top: 70px;
+	right: -320px;
+	-webkit-transition: .5s;
+	transition: .5s;
+	background-color: rgba(255,255,255,.8);
+}
+
+.sub-menu ul {
+	margin: 0;
+	padding: 0;
+}
+
+.sub-menu li {
+	list-style: none;
+	border-bottom: 1px solid #006b3b;
+	padding: 5px 0 5px 15px;
+}
+
+.sub-menu li a {
+	color: #006b3b;
+	font-size: 18px;
+	text-decoration: none;
+}
+
+.sub-menu li:active,
+.sub-menu li:focus {
+	background-color: #006b3b;
+}
+
+.sub-menu li:active a,
+.sub-menu li:focus a {
+	color: white;
+}
+
+.sub-menu-visible {
+	right: 0;
+}
+
+.mobile .date {
+	color: #006b3b;
+	font-family: MyriadSem, sans-serif;
+	font-size: 25px;
+}
+
+.mobile .burger {
+	float: right;
+	cursor: pointer;
+}
+
+.mobile .burger > div {
+	width: 30px;
+	border: 2px solid #006b3b;
+	margin: 4px 0;
+	-webkit-transition: .5s;
+	transition: .5s;
+}
+
+.mobile .burger.cross > div:first-child {
+	-webkit-transform: translateY(10px) rotate(45deg);
+	-ms-transform: translateY(10px) rotate(45deg);
+	-o-transform: translateY(10px) rotate(45deg);
+	-moz-transform: translateY(10px) rotate(45deg);
+	transform: translateY(10px) rotate(45deg);
+}
+
+.mobile .burger.cross > div:last-child {
+	-webkit-transform: translateY(-6px) rotate(135deg);
+	-ms-transform: translateY(-6px) rotate(135deg);
+	-o-transform: translateY(-6px) rotate(135deg);
+	-moz-transform: translateY(-6px) rotate(135deg);
+	transform: translateY(-6px) rotate(135deg);
+}
+
+.mobile .burger.cross > div:nth-child(2) {
+	opacity: 0
+}
+
+@media screen and (max-width: 1199px) {
+	.menu {
+		width: 100%;
+	}
+	.menu-item {
+		padding: 0 10px;
+	}
+}
+
+
+/* ШАПКА */
+
+.hat {
+	background: url('../img/shapka-fon.jpg') no-repeat;
+	background-size: 100%;
+	color: #006b3b;
+	padding-top: 185px;
+}
+
+.hat-text, .hat-date {
+	border: 1px solid blue;
+	padding: 0;
+}
+
+.hat-date {
+	font-size: 40px;
+	line-height: 40px;
+	font-weight: bold;
+	padding: 10px 0 0 20px;
+}
+
+.hat-date span {
+	font-size: 60px;
+}
+
+.hat-text {
+	text-align: right;
+}
+
+.hat-text p:first-child {
+	font-family: Pattaya;
+	font-size: 30px;
+	margin: 0;
+}
+
+.hat-text p:last-child {
+	font-size: 115px;
+	font-weight: bold;
+	line-height: 80px;
+	margin: 0;
+}
+
+.hat-text p:last-child span.pet {
+	font-size: 80px;
+}
+
+.hat-text p:last-child span.ned {
+	letter-spacing: 9px;
+	margin-right: -9px;
+}
+
+@media screen and (max-width: 1199px) {
+	.hat-date {
+		font-size: 28px;
+		line-height: 32px;
+	}
+	.hat-date span {
+		font-size: 38px;
+	}
+}
