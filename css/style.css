@@ -86,7 +86,8 @@ div.row {
 	right: -320px;
 	-webkit-transition: .5s;
 	transition: .5s;
-	background-color: rgba(255,255,255,.8);
+	background-color: rgba(255,255,255,.9);
+	z-index: 1;
 }
 
 .sub-menu ul {
@@ -178,10 +179,9 @@ div.row {
 	padding-top: 165px;
 	box-sizing: border-box;
 	height: 785px;
-	border: 1px solid red;
 }
 
-.hat .row {
+.hat .hat-desktop {
 	position: relative;
 }
 
@@ -192,7 +192,6 @@ div.row {
 }
 
 .hat-text, .hat-date {
-	border: 1px solid blue;
 	padding: 0;
 }
 
@@ -246,6 +245,10 @@ div.row {
 	font-size: 17px;
 }
 
+.but-ton-wrap .date {
+	display: none;
+}
+
 .but-ton:before {
 	content: '';
     position: absolute;
@@ -294,47 +297,33 @@ div.row {
 
 .soc {
 	padding: 0 0 0 20px;
-	border: 1px solid red;
 }
 
 .soc .vk {
 	margin-right: 10px;
 }
 
+.mob-slogan {
+	font-family: Pattaya;
+	font-size: 30px;
+	text-align: center;
+	padding: 30px 0;
+}
+
+.mob-soc {
+	text-align: center;
+	word-spacing: 15px;
+}
+
 @media screen and (max-width: 1700px) {
 	.hat {
-		background-size: 115%;
+		background-size: cover;
 		background-position: 50% 50%;
-	}
-}
-
-@media screen and (max-width: 1600px) {
-	.hat {
-		background-size: 125%;
-	}
-}
-
-@media screen and (max-width: 1500px) {
-	.hat {
-		background-size: 135%;
-	}
-}
-
-@media screen and (max-width: 1400px) {
-	.hat {
-		background-size: 145%;
-	}
-}
-
-@media screen and (max-width: 1300px) {
-	.hat {
-		background-size: 155%;
 	}
 }
 
 @media screen and (max-width: 1199px) {
 	.hat {
-		background-size: 165%;
 		height: 700px;
 		padding-top: 140px;
 	}
@@ -359,10 +348,43 @@ div.row {
 		width: 200px;
 		float: right;
 	}
+	.ticket {
+		margin-left: 0;
+		margin-top: 10px;
+	}
 	.logo-foto {
 		left: 95px;
 		top: 100px;
 		width: 300px;
+	}
+}
+
+@media screen and (max-width: 991px) {
+	.hat {
+		height: auto;
+		padding: 120px 0 50px;
+	}
+	.but-ton-wrap {
+		float: none;
+		margin: 10px auto;
+	}
+}
+
+@media screen and (max-width: 767px) {
+	.hat {
+		padding: 50px 0;
+	}
+}
+
+@media screen and (max-width: 600px) {
+	.hat {
+		padding: 35px 0;
+	}
+	.mob-slogan {
+		padding: 30px 0 10px;
+	}
+	.mob-skk {
+		width: 80px;
 	}
 }
 
@@ -372,5 +394,68 @@ div.row {
 	}
 	.mobile .logo {
 		width: 90%;
+	}
+	.picture {
+		display: none;
+	}
+	.mob-but {
+		width: 100%;
+	}
+	.but-ton-wrap {
+		width: 100%;
+		text-align: center;
+	}
+	.but-ton-wrap .date {
+		display: block;
+		font-size: 30px;
+		font-weight: bold;
+		margin-top: 15px;
+	}
+}
+
+
+/* ТЕМАТИКА */
+
+
+.theme {
+	color: #006b3b;
+}
+
+.theme h1 {
+	font-family: Pattaya;
+	margin-bottom: 50px;
+}
+
+.theme ul {
+	margin: 0;
+	padding: 0;
+}
+
+.theme li {
+	list-style: none;
+	margin: 25px 0;
+	font-size: 18px;
+}
+
+.theme li:hover {
+	font-weight: bold;
+}
+
+.pics {
+	padding: 0;
+}
+
+.column {
+	float: left;
+	width: 33.333%;
+}
+
+.column img {
+	margin: 0 auto 0.2vw;
+}
+
+@media screen and (max-width: 991px) {
+	.theme {
+		width: 100%;
 	}
 }
