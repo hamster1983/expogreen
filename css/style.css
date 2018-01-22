@@ -48,13 +48,14 @@ div.row {
 	color: #006b3b;
 	font-family: Myriad, 'Arial Narrow', sans-serif;
 	font-size: 15px;
-	padding: 0 15px;
-	margin-top: 25px;
+	padding: 5px 15px;
+	margin-top: 20px;
 	position: relative;
 }
 
 .menu-item:hover {
 	font-weight: bold;
+	padding: 0 15px;
 }
 
 .menu-item:before {
@@ -174,7 +175,20 @@ div.row {
 	background: url('../img/shapka-fon.jpg') no-repeat;
 	background-size: 100%;
 	color: #006b3b;
-	padding-top: 185px;
+	padding-top: 165px;
+	box-sizing: border-box;
+	height: 785px;
+	border: 1px solid red;
+}
+
+.hat .row {
+	position: relative;
+}
+
+.logo-foto {
+	position: absolute;
+	bottom: -70px;
+	left: 160px;
 }
 
 .hat-text, .hat-date {
@@ -186,7 +200,7 @@ div.row {
 	font-size: 40px;
 	line-height: 40px;
 	font-weight: bold;
-	padding: 10px 0 0 20px;
+	padding: 10px 0 0 40px;
 }
 
 .hat-date span {
@@ -197,34 +211,166 @@ div.row {
 	text-align: right;
 }
 
-.hat-text p:first-child {
+.hat-text p.slogan {
 	font-family: Pattaya;
 	font-size: 30px;
 	margin: 0;
 }
 
-.hat-text p:last-child {
+.hat-text p.title {
 	font-size: 115px;
 	font-weight: bold;
 	line-height: 80px;
 	margin: 0;
 }
 
-.hat-text p:last-child span.pet {
+.hat-text p.title span.pet {
 	font-size: 80px;
 }
 
-.hat-text p:last-child span.ned {
+.hat-text p.title span.ned {
 	letter-spacing: 9px;
 	margin-right: -9px;
 }
 
+.but-ton {
+	display: inline-block;
+	width: 190px;
+	height: 60px;
+	position: relative;
+	overflow: hidden;
+	color: white;
+	padding: 10px;
+	margin-top: 40px;
+	text-align: center;
+	font-size: 17px;
+}
+
+.but-ton:before {
+	content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: -100%;
+	-webkit-transition: .5s;
+    transition: .5s;
+}
+
+.but-ton:hover:before {
+	left: 0;
+}
+
+.ticket {
+	background-color: #006b3b;
+	margin-left: 10px;
+}
+.ticket:before {
+	background-color: #f1b707;
+}
+
+.stand {
+	background-color: #f1b707;
+}
+
+.stand:before {
+	background-color: #006b3b;
+}
+
+.but-ton span {
+	position: absolute;
+	display: inline-block;
+	width: 100%;
+	left: 0;
+}
+
+.stand span {
+	top: 19px;
+}
+
+.ticket span {
+	top: 5px;
+}
+
+.soc {
+	padding: 0 0 0 20px;
+	border: 1px solid red;
+}
+
+.soc .vk {
+	margin-right: 10px;
+}
+
+@media screen and (max-width: 1700px) {
+	.hat {
+		background-size: 115%;
+		background-position: 50% 50%;
+	}
+}
+
+@media screen and (max-width: 1600px) {
+	.hat {
+		background-size: 125%;
+	}
+}
+
+@media screen and (max-width: 1500px) {
+	.hat {
+		background-size: 135%;
+	}
+}
+
+@media screen and (max-width: 1400px) {
+	.hat {
+		background-size: 145%;
+	}
+}
+
+@media screen and (max-width: 1300px) {
+	.hat {
+		background-size: 155%;
+	}
+}
+
 @media screen and (max-width: 1199px) {
+	.hat {
+		background-size: 165%;
+		height: 700px;
+		padding-top: 140px;
+	}
 	.hat-date {
-		font-size: 28px;
-		line-height: 32px;
+		font-size: 36px;
+		line-height: 38px;
+		padding: 0 0 0 15px;
 	}
 	.hat-date span {
-		font-size: 38px;
+		font-size: 50px;
+	}
+	.hat-text p.slogan {
+		font-size: 26px;
+	}
+	.hat-text p.title {
+		font-size: 100px;
+	}
+	.hat-text p.title span.pet {
+		font-size: 70px;
+	}
+	.but-ton-wrap {
+		width: 200px;
+		float: right;
+	}
+	.logo-foto {
+		left: 95px;
+		top: 100px;
+		width: 300px;
+	}
+}
+
+@media screen and (max-width: 500px) {
+	.mobile .date {
+		display: none;
+	}
+	.mobile .logo {
+		width: 90%;
 	}
 }
