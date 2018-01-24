@@ -1,5 +1,7 @@
 $(document).ready(function(){
 
+	new WOW().init();
+
 	//вылетающее меню на мобильных
 	$('.burger').click(function(){
 		$('.sub-menu').toggleClass('sub-menu-visible');
@@ -17,9 +19,9 @@ $(document).ready(function(){
 			});
 		},function(){
 			$('.pics img').css('opacity', 1);
-			
 	});
 	
+	//слайдер отзывов
 	$('.com-items').slick({
 	  infinite: true,
 	  autoplay: true,
