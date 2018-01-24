@@ -481,3 +481,210 @@ div.row {
 		margin-bottom: 30px;
 	}
 }
+
+
+/* НОВОСТИ */
+
+.news {
+	background-color: #EEEEEE;
+	padding: 10px 0;
+	color: #006b3b;
+}
+
+.news h2 {
+	text-align: center;
+	font-family: Pattaya;
+}
+
+
+/* ПРИНЯТЬ УЧАСТИЕ */
+
+.takepart {
+	background-image: url('../img/takepart-fon.jpg');
+	height: 984px;
+}
+
+
+/* БЕСПЛАТНЫЙ БИЛЕТ */
+
+.ticket-wrap {
+	background-color: #EBEBEB;
+	font-family: Pattaya;
+	color: #006b3b;
+	padding: 50px 0;
+}
+
+.ticket-wrap h2 {
+	text-align: center;
+	margin-bottom: 30px;
+}
+
+.ticket-wrap p {
+	font-size: 17px;
+	margin-bottom: 20px;
+}
+
+.bottom-block {
+	float: right;
+	text-align: center;
+}
+
+.ticket-text, .free-ticket {
+	display: inline-block;
+	vertical-align: top;
+}
+
+.ticket-text {
+	padding: 10px;
+	font-size: 18px;
+}
+
+.free-ticket {
+	position: relative;
+	overflow: hidden;
+	width: 190px;
+	height: 45px;
+	color: white;
+	font-family: Myriad, sans-serif;
+	text-align: center;
+	font-size: 17px;
+	background-color: #006b3b;
+}
+
+.free-ticket span {
+	position: absolute;
+	display: inline-block;
+	width: 100%;
+	left: 0;
+	top: 10px;
+}
+
+.free-ticket:before {
+	background-color: #f1b707;
+	content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: -100%;
+    -webkit-transition: .5s;
+    transition: .5s;
+}
+
+.free-ticket:hover:before {
+	left: 0;
+}
+
+#ticket {
+	color: #006b3b;
+}
+
+#ticket .modal-header {
+	font-family: Pattaya;
+	font-size: 26px;
+	text-align: center;
+}
+
+#ticket .modal-header button {
+	font-family: Myriad, sans-serif;
+	font-weight: bold;
+	border: 2px solid black;
+	padding: 2px 7px;
+	border-radius: 50%;
+}
+
+#ticket [type="text"] {
+	width: 100%;
+	height: 45px;
+}
+
+#ticket label {
+	font-weight: normal;
+}
+
+#ticket label a {
+	color: black;
+	font-weight: bold;
+}
+
+#ticket [type="submit"] {
+	display: block;
+	margin: 0 auto;
+	padding: 5px 10px;
+	font-size: 16px;
+}
+
+.vkontakte, .content {
+	overflow: hidden;
+}
+
+@media screen and (max-width: 991px) {
+	.ticket-wrap .container {
+		width: 100%;
+	}
+}
+
+@media screen and (max-width: 767px) {
+	.vkontakte {
+		padding-top: 20px;
+	}
+}
+
+
+/* ОТЗЫВЫ */
+
+.com-item {
+	border: 1px solid silver;
+	width: 260px;
+	min-height: 450px;
+	margin: 0 auto;
+	-webkit-transition: .5s;
+	transition: .5s;
+}
+
+.com-item:hover {
+	border: 5px solid #006b3b;
+	color: #006b3b;
+}
+
+.com-item .top-pic {
+	height: 150px;
+	margin-bottom: 50px;
+	position: relative;
+	background-size: cover;
+	border: 1px solid black;
+}
+
+.com-item .top-pic:after {
+	content: '';
+	display: block;
+	position: absolute;
+	left: 0;
+	right: 0;
+	bottom: -35px;
+	margin: auto;
+	width: 70px;
+	height: 70px;
+	border: 2px solid silver;
+	border-radius: 50%;
+	-webkit-transition: .5s;
+	transition: .5s;
+}
+
+.com-item .top-pic:hover:after {
+	border: 2px solid #006b3b;
+}
+
+.com-item p {
+	padding: 0 25px;
+}
+	
+.com-item p.name {
+	font-size: 18px;
+}
+	
+	
+	
+	
+	
+	
