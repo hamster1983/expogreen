@@ -650,6 +650,29 @@ div.row {
 #ticket .modal-content {
 	border-radius: 0;
 	margin-top: 70px;
+	position: relative;
+	background: none;
+}
+
+#white-fon {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: white;
+}
+
+#fon {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	opacity: .3;
+	background-image: url('../img/modal-fon.jpg');
+	background-size: cover;
+	background-position: 50% 50%;
 }
 
 #ticket .modal-header {
@@ -658,17 +681,22 @@ div.row {
 	text-align: center;
 }
 
-#ticket .modal-header button {
+#ticket [data-dismiss="modal"] {
 	font-family: Myriad, sans-serif;
 	font-weight: bold;
-	border: 2px solid black;
-	padding: 2px 7px;
-	border-radius: 50%;
+	float: right;
+	color: black;
+	cursor: pointer;
+}
+
+#ticket .modal-body {
+	padding: 0 15%;
 }
 
 #ticket [type="text"] {
 	width: 100%;
 	height: 45px;
+	font-size: 20px;
 }
 
 #ticket label {
@@ -701,10 +729,17 @@ div.row {
 	.vkontakte {
 		padding-top: 20px;
 	}
+	#ticket .modal-body {
+		padding: 0 10%;
+	}
 }
 
 
 /* ОТЗЫВЫ */
+
+.comments {
+	padding: 30px 0;
+}
 
 .com-item {
 	border: 1px solid silver;
@@ -755,9 +790,82 @@ div.row {
 .com-item p.name {
 	font-size: 18px;
 }
+
+
+/* ПАРТНЕРЫ */
+
+.partners {
+	padding: 15px 0 70px;
+	background-color: #107c4a;
+}
+
+.partners h2 {
+    text-align: center;
+    color: white;
+    font-family: Pattaya;
+	margin-bottom: 30px;
+}
+
+.part-items img {
+	display: block;
+	margin: 0 auto;
+}
+
+.partners .slick-next,
+.partners .slick-prev {
+	top: 45%;
+	z-index: 1;
+}
+
+.partners .slick-prev:before,
+.partners .slick-next:before {
+	font-weight: bold;
+	font-size: 30px;
+}
+
+.partners .slick-prev:before {
+    content: '<';
+}
+
+.partners .slick-next:before {
+    content: '>';
+}
+
+@media screen and (max-width: 767px) {
+	.partners .slick-prev {
+		right: 10px;
+	}
+	.partners .slick-next {
+		left: 10px;
+	}
+}
+
+@media screen and (max-width: 600px) {
+	.partners .slick-prev {
+		right: -10px;
+	}
+	.partners .slick-next {
+		left: -10px;
+	}
+}
+
+
+/* КОНТАКТЫ */
+
+.contacts {
+	background-image: url('../img/contacts-fon.jpg');
+	background-size: cover;
+	background-position: 50% 50%;
+	color: white;
+	height: 975px;
+}
 	
 	
 	
+	
+	
+	
+
 	
 	
 	

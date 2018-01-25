@@ -50,4 +50,39 @@ $(document).ready(function(){
 	  ] 
 	});
 	
+	$('.part-items').slick({
+	  infinite: true,
+	  autoplay: true,
+	  speed: 1500,
+	  slidesToShow: 7,
+	  slidesToScroll: 2,
+	  rtl: true,
+	  responsive: [
+		{
+		  breakpoint: 1199,
+		  settings: {
+			slidesToShow: 5,
+		  }
+		},
+		{
+		  breakpoint: 991,
+		  settings: {
+			slidesToShow: 4,
+		  }
+		},
+		{
+		  breakpoint: 767,
+		  settings: {
+			slidesToShow: 3,
+		  }
+		},
+		{
+		  breakpoint: 600,
+		  settings: {
+			slidesToShow: 2,
+		  }
+		}
+	  ] 
+	});
+	
 });
