@@ -858,10 +858,33 @@ div.row {
 	background-position: 50% 50%;
 	color: white;
 	height: 975px;
+	padding: 200px 0;
+	border: 1px solid red;
+}
+
+.contacts h2 {
+    text-align: center;
+    color: white;
+    font-family: Pattaya;
+	margin-bottom: 30px;
+}
+
+.contacts .col-sm-4 {
+	text-align: center;
+	padding: 100px 0;
+}
+
+#mapkit-8962 {
+    height:300px;
+    width:auto;
+    box-shadow: -2px -2px 3px black;
 }
 	
-	
-	
+@media screen and (max-width: 767px) {
+	.contacts .col-sm-4 {
+		padding: 0 0 50px 0;
+	}
+}
 	
 	
 	
