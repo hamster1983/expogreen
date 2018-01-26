@@ -738,16 +738,41 @@ div.row {
 /* ОТЗЫВЫ */
 
 .comments {
-	padding: 30px 0;
+	padding: 30px 0 80px;
+}
+
+.comments h2 {
+    text-align: center;
+    color: #006b3b;
+    font-family: Pattaya;
+	margin-bottom: 30px;
+}
+
+.comments .slick-prev:before,
+.comments .slick-next:before {
+	color: #107c4a;
+	font-size: 35px;
+}
+
+.comments .slick-prev {
+	left: 35%;
+	top: 105%;
+}
+
+.comments .slick-next {
+	right: 35%;
+	top: 105%;
 }
 
 .com-item {
 	border: 1px solid silver;
 	width: 260px;
-	min-height: 450px;
+	height: auto;
+	padding-bottom: 15px;
 	margin: 0 auto;
 	-webkit-transition: .5s;
 	transition: .5s;
+	box-shadow: 2px 2px 3px silver;
 }
 
 .com-item:hover {
@@ -760,7 +785,47 @@ div.row {
 	margin-bottom: 50px;
 	position: relative;
 	background-size: cover;
-	border: 1px solid black;
+	background-position: 50% 50%;
+}
+
+.com-item.one .top-pic {
+	background-image: url('../img/comments/pic1.jpg');
+}
+
+.com-item.two .top-pic {
+	background-image: url('../img/comments/pic2.jpg');
+}
+
+.com-item.three .top-pic {
+	background-image: url('../img/comments/pic3.jpg');
+}
+
+.com-item.four .top-pic {
+	background-image: url('../img/comments/pic4.jpg');
+}
+
+.com-item.five .top-pic {
+	background-image: url('../img/comments/pic5.jpg');
+}
+
+.com-item.six .top-pic {
+	background-image: url('../img/comments/pic6.jpg');
+}
+
+.com-item.seven .top-pic {
+	background-image: url('../img/comments/pic7.jpg');
+}
+
+.com-item.eight .top-pic {
+	background-image: url('../img/comments/pic8.jpg');
+}
+
+.com-item.nine .top-pic {
+	background-image: url('../img/comments/pic9.jpg');
+}
+
+.com-item.ten .top-pic {
+	background-image: url('../img/comments/pic10.jpg');
 }
 
 .com-item .top-pic:after {
@@ -774,12 +839,54 @@ div.row {
 	width: 70px;
 	height: 70px;
 	border: 2px solid silver;
+	background-size: cover;
+	background-position: 50% 50%;
 	border-radius: 50%;
-	-webkit-transition: .5s;
-	transition: .5s;
+	-webkit-transition: .4s;
+	transition: .4s;
 }
 
-.com-item .top-pic:hover:after {
+.com-item.one .top-pic:after {
+	background-image: url('../img/comments/1.jpg');
+}
+
+.com-item.two .top-pic:after {
+	background-image: url('../img/comments/2.jpg');
+}
+
+.com-item.three .top-pic:after {
+	background-image: url('../img/comments/3.jpg');
+}
+
+.com-item.four .top-pic:after {
+	background-image: url('../img/comments/4.jpg');
+}
+
+.com-item.five .top-pic:after {
+	background-image: url('../img/comments/5.jpg');
+}
+
+.com-item.six .top-pic:after {
+	background-image: url('../img/comments/6.jpg');
+}
+
+.com-item.seven .top-pic:after {
+	background-image: url('../img/comments/7.jpg');
+}
+
+.com-item.eight .top-pic:after {
+	background-image: url('../img/comments/8.jpg');
+}
+
+.com-item.nine .top-pic:after {
+	background-image: url('../img/comments/9.jpg');
+}
+
+.com-item.ten .top-pic:after {
+	background-image: url('../img/comments/10.jpg');
+}
+
+.com-item:hover .top-pic:after {
 	border: 2px solid #006b3b;
 }
 

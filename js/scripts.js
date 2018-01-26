@@ -25,7 +25,8 @@ $(document).ready(function(){
 	$('.com-items').slick({
 	  infinite: true,
 	  autoplay: true,
-	  speed: 1500,
+	  autoplaySpeed: 5000,
+	  speed: 2000,
 	  slidesToShow: 4,
 	  slidesToScroll: 1,
 	  responsive: [
