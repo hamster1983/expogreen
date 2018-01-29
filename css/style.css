@@ -481,6 +481,7 @@ span.fonts {
 	margin: 0 auto 0.5vw;
 	-webkit-transition: .4s;
 	transition: .4s;
+	opacity: 0;
 }
 
 @media screen and (max-width: 991px) {

@@ -1,36 +1,55 @@
 $(document).ready(function(){
 
-	new WOW().init();
-
 	//вылетающее меню на мобильных
 	$('.burger').click(function(){
 		$('.sub-menu').toggleClass('sub-menu-visible');
 		$('.burger').toggleClass('cross');
 	});
 	
+
 	//скролл из меню к элементам
 	function scrollToDiv(elem){
 		$('body,html').animate({
 			scrollTop: elem.offset().top
 		}, 1000);
 	}
-	
-	$('.menu a').click(function(){
+	$('.menu a, .sub-menu a').click(function(){
 		var el = $(this).attr('href');
 		var elWrapped = $(el);
 		scrollToDiv(elWrapped);
 		return false;
 	});
-	
-	$('.sub-menu a').click(function(){
-		var el = $(this).attr('href');
-		var elWrapped = $(el);
-		scrollToDiv(elWrapped);
-		$('.sub-menu').toggleClass('sub-menu-visible');
-		$('.burger').toggleClass('cross');
-		return false;
+
+
+	//появление картинок
+	var pics = [
+		$('[name="sazhency"]'),
+		$('[name="semena"]'),
+		$('[name="inventar"]'),
+		$('[name="teplicy"]'),
+		$('[name="udobrenia"]'),
+		$('[name="mebel"]'),
+		$('[name="pressa"]'),
+		$('[name="wc"]'),
+		$('[name="kompost"]'),
+		$('[name="hoztovary"]')
+	];
+
+	var showPicture = function(pic, delay) {
+		setTimeout(function(){pic.css('opacity', 1)}, delay);
+	}
+
+	var flag = true;
+	$(window).scroll(function() {
+		if($(this).scrollTop() >= 400 && flag == true) {
+			flag = false;
+			for(var i = 0; i<10; i++) {
+        		showPicture(pics[i], 120*i);
+			}
+		}
 	});
 	
+
 	//стилизуем картинки в тематических разделах
 	$('.theme-item').hover(
 		function(){
@@ -44,12 +63,14 @@ $(document).ready(function(){
 			$('.pics img').css('opacity', 1);
 	});
 	
+
 	//кнопка "наверх"
 	$('.up').click(function(){
 		$('body,html').animate({
 			scrollTop: 0
 		}, 1000);
 	});
+	
 	
 	//слайдер отзывов
 	$('.com-items').slick({
