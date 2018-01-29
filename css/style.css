@@ -31,6 +31,14 @@ div.row {
 	margin: 0 !important;
 }
 
+a {
+	outline: none !important;
+}
+
+span.fonts {
+	font-family: Myriad, 'Arial Narrow', sans-serif;
+}
+
 
 /* МЕНЮ */
 
@@ -756,18 +764,18 @@ div.row {
 
 .comments .slick-prev {
 	left: 35%;
-	top: 105%;
+	top: 110%;
 }
 
 .comments .slick-next {
 	right: 35%;
-	top: 105%;
+	top: 110%;
 }
 
 .com-item {
 	border: 1px solid silver;
 	width: 260px;
-	height: auto;
+	height: 440px;
 	padding-bottom: 15px;
 	margin: 0 auto;
 	-webkit-transition: .5s;
@@ -964,9 +972,7 @@ div.row {
 	background-size: cover;
 	background-position: 50% 50%;
 	color: white;
-	height: 975px;
-	padding: 200px 0;
-	border: 1px solid red;
+	padding: 150px 0 200px;
 }
 
 .contacts h2 {
@@ -976,9 +982,32 @@ div.row {
 	margin-bottom: 30px;
 }
 
+.contacts .row:last-child {
+	padding-top: 30px;
+	position: relative;
+}
+
+.contacts .row:last-child .up {
+	position: absolute;
+	right: 30px;
+	bottom: 35%;
+	cursor: pointer;
+	box-shadow: 2px 2px 3px black;
+	border-radius: 2px;
+}
+
 .contacts .col-sm-4 {
 	text-align: center;
 	padding: 100px 0;
+}
+
+.contacts p {
+	max-width: 385px;
+	margin: 25px auto;
+}
+
+.contacts p a {
+	color: white;
 }
 
 #mapkit-8962 {
@@ -988,14 +1017,52 @@ div.row {
 }
 	
 @media screen and (max-width: 767px) {
+	.contacts {
+		padding: 70px 0;
+	}
 	.contacts .col-sm-4 {
 		padding: 0 0 50px 0;
 	}
+	.contacts p {
+		text-align: center;
+	}
 }
-	
-	
-	
 
+@media screen and (max-width: 500px) {
+	.contacts .row:last-child .up {
+		position: static;
+		display: block;
+		margin: 0 auto;
+	}
+}
+
+/* ФУТЕР */
+
+.footer {
+	padding: 30px 0;
+	background-color: #107c4a;
+	color: white;
+}
+
+.footer [class^="col-"] {
+	padding: 10px;
+}
+
+.footer .soc {
+	text-align: center;
+}
+
+.footer .soc img {
+	margin: 7px;
+}
+
+@media screen and (max-width: 767px) {
+	.footer [class^="col-"] {
+		text-align: center;
+	}
 	
-	
+	.footer .org img {
+		margin: 0 auto;
+	}
+}
 	

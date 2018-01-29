@@ -8,6 +8,20 @@ $(document).ready(function(){
 		$('.burger').toggleClass('cross');
 	});
 	
+	//скролл из меню к элементам
+	function scrollToDiv(elem){
+		$('body,html').animate({
+			scrollTop: elem.offset().top
+		}, 1000);
+	}
+	
+	$('.menu a').click(function(){
+		var el = $(this).attr('href');
+		var elWrapped = $(el);
+		scrollToDiv(elWrapped);
+		return false;
+	});
+	
 	//стилизуем картинки в тематических разделах
 	$('.theme-item').hover(
 		function(){
@@ -19,6 +33,13 @@ $(document).ready(function(){
 			});
 		},function(){
 			$('.pics img').css('opacity', 1);
+	});
+	
+	//кнопка "наверх"
+	$('.up').click(function(){
+		$('body,html').animate({
+			scrollTop: 0
+		}, 1000);
 	});
 	
 	//слайдер отзывов
@@ -51,6 +72,7 @@ $(document).ready(function(){
 	  ] 
 	});
 	
+	//слайдер партнеров
 	$('.part-items').slick({
 	  infinite: true,
 	  autoplay: true,
