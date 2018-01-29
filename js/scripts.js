@@ -22,6 +22,15 @@ $(document).ready(function(){
 		return false;
 	});
 	
+	$('.sub-menu a').click(function(){
+		var el = $(this).attr('href');
+		var elWrapped = $(el);
+		scrollToDiv(elWrapped);
+		$('.sub-menu').toggleClass('sub-menu-visible');
+		$('.burger').toggleClass('cross');
+		return false;
+	});
+	
 	//стилизуем картинки в тематических разделах
 	$('.theme-item').hover(
 		function(){
